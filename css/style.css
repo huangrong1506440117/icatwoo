@@ -62,6 +62,10 @@
 	float: left;
 	width: 500px;	
 }
+#map {
+	margin: -420px 10px 50px 820px;
+	padding: -20px 50px 20px 80px;
+}
 #body .contact ul {
 	margin: 0;
 	padding: 0;	

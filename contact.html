@@ -7,18 +7,19 @@
     <title>icatwoo</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=kaSHc4nqVGfPgqKKxaORY2Ui2XPuwj8G"></script>
 </head>
 <body>
 <nav class="navbar-default navbar-insverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
-                <button type="button" data-toggle="collapse" class="navbar-toggle collapsed" data-target="id1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">icatwoo</a>
+            <button type="button" data-toggle="collapse" class="navbar-toggle collapsed" data-target="id1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">icatwoo</a>
         </div>
     </div>
 </nav> 
@@ -51,9 +52,6 @@
         <a href="index.html"><img src="images/logo.png" alt="" /></a>
     </div>
 </div>
-
-
-
 <div id="body">
     <div class="contact">
         <h1>联系我们</h1>	
@@ -108,8 +106,7 @@
     </div>
 </div>
 </div> 
-
-
+<div style="width:400px;height:350px;border:#ccc solid 1px;font-size:12px" id="map"></div>
 <div class="bottom">    
     <div class="bllx">
         <ul>
@@ -122,8 +119,54 @@
     <div class="blrt"> 
         huangrong&amp;xumenghan
     </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-</div>
+</div>    
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+      createMap();//创建地图
+      setMapEvent();//设置地图事件
+      addMapControl();//向地图添加控件
+      addMapOverlay();//向地图添加覆盖物
+    }
+    function createMap(){ 
+      map = new BMap.Map("map"); 
+      map.centerAndZoom(new BMap.Point(114.601396,30.774576),11);
+    }
+    function setMapEvent(){
+      map.enableScrollWheelZoom();
+      map.enableKeyboard();
+      map.enableDragging();
+      map.enableDoubleClickZoom()
+    }
+    function addClickHandler(target,window){
+      target.addEventListener("click",function(){
+        target.openInfoWindow(window);
+      });
+    }
+    function addMapOverlay(){
+      var labels = [
+        {position:{lng:114.537006,lat:30.725912},content:"我的标记"}
+      ];
+      for(var index = 0; index < labels.length; index++){
+        var opt = { position: new BMap.Point(labels[index].position.lng,labels[index].position.lat )};
+        var label = new BMap.Label(labels[index].content,opt);
+        map.addOverlay(label);
+      };
+    }
+    //向地图添加控件
+    function addMapControl(){
+      var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+      scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+      map.addControl(scaleControl);
+      var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+      map.addControl(navControl);
+      var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:true});
+      map.addControl(overviewControl);
+    }
+    var map;
+      initMap();
+  </script>
 </body>
 </html>
