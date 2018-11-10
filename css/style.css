@@ -429,3 +429,13 @@ img,
   margin-top: 10px;
   margin-bottom: 10px;
 }
+.container-small {
+	padding-top:60px;
+	max-width: 500px;
+  }
+.footer {
+	margin-top: 20px;
+	padding: 50px 0;
+	text-align:center;
+	color: #999;
+  }
