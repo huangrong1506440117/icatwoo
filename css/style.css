@@ -1,3 +1,27 @@
+#body .about {
+	margin: 0 auto;
+	padding: 0 10px 50px 10px;
+	width: 940px;
+}	
+#body .about h2 {
+	color: #918873;
+	font-size: 16px;
+	margin: 0;
+	padding: 0 0 5px 0;	
+	text-transform: capitalize;
+}
+#body .about div {
+	margin: 0;
+	padding: 0 0 30px 0;
+}
+#body .about div p1{
+	margin: 50;
+	padding: 0 0 590px 0;
+}
+
+
+
+
 body {
 	background: #FFFFFF;
 	font-family: Arial, Helvetica, sans-serif;
