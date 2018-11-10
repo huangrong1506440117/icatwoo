@@ -170,3 +170,55 @@ body {
 	padding:30px 20px 0 0; 
 	line-height:40px;
 }
+#header {
+	background: url(../images/bg-header.jpg) repeat-x;
+	margin: 0;
+	padding: 120px;	
+	overflow: hidden;
+}
+#body .gallery {
+	margin: 0 auto;
+	padding: 0;
+	padding: 0 0 50px 10px;	
+}
+#body .gallery div {
+	margin: 0;
+	overflow: hidden;
+	padding: 0 0 5px 0;	
+}
+#body .gallery div div {
+	float: left;
+}
+#body .gallery div ul {
+	float: left;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;	
+
+}
+#body .gallery div ul li {
+	float: left;
+	list-style: none;
+	margin: 0 10px 10px;
+	padding: 0;	
+}
+#body .gallery div img{
+	border: 0;	
+}
+#body span.heading {
+	display: block;
+	margin: 0;
+	padding: 0;
+	position: relative;	
+}
+#body h1 {
+	color: #918873;
+	font-family: Times New Roman;
+	font-size: 36px;
+	margin: 0;
+	padding: 48px 0;	
+	text-transform: capitalize;
+}
+p {
+	color: #918873;	
+}
