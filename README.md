@@ -14,7 +14,7 @@
     icatwoo是一个自由和开放的网站，不需要另行安装，在浏览器中进行访问即可。
     
 使用指南：
-    建议使用Internet Explorer 9+，Firefox，Opera，Chrome以及Safari浏览器进行浏览。使用Internet Explorer 8及更早的版本不支持<video>标签，可能会无法播放视频。
+    建议使用Internet Explorer 9+，Firefox，Opera，Chrome以及Safari浏览器进行浏览。使用Internet Explorer 8及更早的版本不支持video标签，可能会无法播放视频。
 
 贡献者：
     黄蓉，徐梦涵
